@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo2.css">
+    <title>Compra de Camisas</title>
+    <script>
+        function verificarPago() {
+            var cantidadCamisas = parseInt(document.getElementById("cantidadCamisas").value);
+            if (cantidadCamisas => 5) {
+                document.getElementById("resultado").innerHTML = "Debes pagar con tarjeta.";
+            } else if (cantidadCamisas <= 0) {
+                document.getElementById("resultado").innerHTML = "cantidad de camisas no validas";
+            } else {
+                document.getElementById("resultado").innerHTML = "Puedes pagar en efectivo.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="recuadro de compra">
+    <h1>Compra de Camisas</h1>
+    <label for="cantidadCamisas">Cantidad de camisas:</label>
+    <input type="number" id="cantidadCamisas" />
+    <button onclick="verificarPago()">Verificar Pago</button>
+    <p id="resultado"></p>
+    </div>
+</body>
+</html>
+
+
